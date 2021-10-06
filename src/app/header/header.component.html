@@ -1,0 +1,29 @@
+
+  <!-- <div>
+    <h2>Top headings</h2>
+  </div> -->
+
+
+<section class="mt-5 vh-100 d-flex  align-items-center">
+
+
+    <div class="container">
+      <owl-carousel-o [options]="customOptions">
+
+        <ng-container *ngFor="let slide of headLines">
+
+          <ng-template carouselSlide [id]="slide.id">
+
+            <h1 class="text-center mb-5 text-light">Top Headings Rigth Now</h1>
+           <h1 class="text-center">{{slide.title}}</h1>
+          </ng-template>
+        </ng-container>
+
+      </owl-carousel-o>
+
+
+    </div>
+</section>
+
+
+

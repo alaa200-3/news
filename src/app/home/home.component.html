@@ -1,0 +1,47 @@
+
+
+<app-header [headLines]='headLines'></app-header>
+
+
+<div class="container">
+  <div class="row py-5">
+
+    <div class="col-md-8 d-flex align-items-center">
+  <div>
+    <div class="brdr w-25 mb-4"></div>
+    <h2>Top Headings to read right now </h2>
+    <p class="second-font-color my-2">about bussiness in US</p>
+
+    <div class="brdr w-25 mb-4"></div>
+</div>
+
+  </div>
+  </div>
+
+  <div class="row py-5">
+    <div *ngFor ='let movie of trendingMovies'class="col-md-8 ">
+
+      <div class="news position-relative my-2 mb-4">
+        <a class="text-decoration-none"  (click)='getNews(movie.url,"bussiness")' [routerLink]='["/moviedetails"]'>
+           <div class="title my-2 w-75 lh-lg">
+            <h3 class="fw-bold text-decoration-none">Title:</h3>
+            <p>{{movie.title}}</p>
+           </div>
+          <img class="w-100 mb-2"[src]='movie.urlToImage'>
+        </a>
+
+        <div class="show w-100">
+          <button class="btn color">Show details</button>
+          <button class="btn btn-danger">Subscribe<i class="px-2 fab fa-youtube"></i></button>
+        </div>
+     </div>
+
+
+     </div>
+
+
+
+  </div>
+
+
+</div>
